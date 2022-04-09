@@ -10,6 +10,8 @@ This, not aiming to be extensive in the slightest, carries three manifests made 
 
 * [zhongfly's nightly `mpv` build](https://github.com/zhongfly/mpv-winbuild)
 
+* In theory, [the very latest version of SABnzbd](https://github.com/sabnzbd/sabnzbd/releases), be it a release version or a beta or an RC.
+
 Thanks to the original authors of the manifests from the default Scoop buckets I copied these from.
 
 How do I install these manifests?

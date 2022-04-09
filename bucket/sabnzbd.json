@@ -1,0 +1,45 @@
+{
+    "version": "3.6.0Beta3",
+    "description": "The automated Usenet download tool (Beta/RC if available)",
+    "homepage": "https://sabnzbd.org",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/sabnzbd/sabnzbd/releases/download/3.6.0Beta3/SABnzbd-3.6.0Beta3-win64-bin.zip",
+            "hash": "3e19f79d2348dcfad2a10687cb44461f45ecdddfa0a8cba25de8e3f192910774"
+        },
+        "32bit": {
+            "url": "https://github.com/sabnzbd/sabnzbd/releases/download/3.6.0Beta3/SABnzbd-3.6.0Beta3-win32-bin.zip",
+            "hash": "51695f9545c826ce1c47ae7bd460e3b2559faaf1b09d304bc0580f18a308f5f9"
+        }
+    },
+    "extract_dir": "SABnzbd-3.6.0Beta3",
+    "bin": [
+        "SABnzbd-console.exe",
+        [
+            "SABnzbd-console.exe",
+            "SABnzbd"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "SABnzbd.exe",
+            "SABnzbd"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/sabnzbd/sabnzbd/releases",
+        "jsonpath": "$[0].tag_name"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/sabnzbd/sabnzbd/releases/download/$version/SABnzbd-$version-win64-bin.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/sabnzbd/sabnzbd/releases/download/$version/SABnzbd-$version-win32-bin.zip"
+            }
+        },
+        "extract_dir": "SABnzbd-$version"
+    }
+}
