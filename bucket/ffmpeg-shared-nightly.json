@@ -8,6 +8,11 @@
             "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2022-04-09-12-37/ffmpeg-N-106544-g58b07ecb3f-win64-gpl-shared.zip",
             "hash": "5b0096c8805b66ee64bbf9e41377418027b684a207978eaad079a72f0b8f1043",
             "extract_dir": "ffmpeg-N-106544-g58b07ecb3f-win64-gpl-shared"
+        },
+        "32bit": {
+            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2022-04-09-12-37/ffmpeg-N-106544-g58b07ecb3f-win32-gpl-shared.zip",
+            "hash": "233dc3fa95d69d0c5d02474b61c0d8168b1de97cd7ed243a6affbd24b22df9fa",
+            "extract_dir": "ffmpeg-N-106544-g58b07ecb3f-win32-gpl-shared"
         }
     },
     "bin": [
@@ -24,6 +29,10 @@
             "64bit": {
                 "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-$matchTime/ffmpeg-N-$version-g$matchHash-win64-gpl-shared.zip",
                 "extract_dir": "ffmpeg-N-$version-g$matchHash-win64-gpl-shared"
+            },
+            "32bit": {
+                "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-$matchTime/ffmpeg-N-$version-g$matchHash-win32-gpl-shared.zip",
+                "extract_dir": "ffmpeg-N-$version-g$matchHash-win32-gpl-shared"
             }
         }
     }
