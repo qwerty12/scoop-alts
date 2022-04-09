@@ -8,7 +8,7 @@ Template bucket for [Scoop](https://scoop.sh), the Windows command-line installe
 How do I install these manifests?
 ---------------------------------
 
-To add this bucket, run `scoop bucket add <bucketname> https://github.com/<username>/<bucketname>`. To install, do `scoop install <manifest>`.
+To add this bucket, run `scoop bucket add scoop-alts https://github.com/qwerty12/scoop-alts`. To install, do `scoop install <manifest>`.
 
 How do I contribute new manifests?
 ----------------------------------
