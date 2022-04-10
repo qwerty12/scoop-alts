@@ -17,4 +17,4 @@ Thanks to the original authors of the manifests from the default Scoop buckets I
 How do I install these manifests?
 ---------------------------------
 
-To add this bucket, run `scoop bucket add scoop-alts https://github.com/qwerty12/scoop-alts`. To install, do `scoop install <manifest>`.
+To add this bucket, run `scoop bucket add scoop-alts https://github.com/qwerty12/scoop-alts`. To install, do `scoop install scoop-alts/<manifest>`.
