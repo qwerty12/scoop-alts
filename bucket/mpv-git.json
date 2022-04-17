@@ -1,5 +1,5 @@
 {
-    "version": "20220416",
+    "version": "20220417",
     "description": "Video player based on MPlayer/mplayer2 (nightly builds by zhongfly)",
     "homepage": "https://mpv.io",
     "license": "LGPL-2.1-or-later,GPL-2.0-or-later",
@@ -13,8 +13,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/2022-04-16/mpv-x86_64-20220416-git-305332f.7z",
-            "hash": "077fe3d595412fde3029ca56607719c43f8d34a52210fc1a7ec5b94188eafd0c"
+            "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/2022-04-17/mpv-x86_64-20220417-git-305332f.7z",
+            "hash": "f7f7ffb77c814179f8ef297f5778bc428eaaa4de77454ec25f892d42e4ba5500"
         }
     },
     "bin": "mpv.com",
