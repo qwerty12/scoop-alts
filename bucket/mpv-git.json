@@ -1,6 +1,6 @@
 {
     "version": "20220426",
-    "description": "Video player based on MPlayer/mplayer2 (shinchiro's nightly builds)",
+    "description": "Video player based on MPlayer/mplayer2 (qwerty12's *modified* nightly builds)",
     "homepage": "https://mpv.io",
     "license": "LGPL-2.1-or-later,GPL-2.0-or-later",
     "notes": [
@@ -13,12 +13,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20220426/mpv-x86_64-20220426-git-bb5b4b1.7z",
-            "hash": "29f4681fcc3d726fb47f4fca8465b4b1217b7e12ffdffc9dd814b87ea65cccc1"
-        },
-        "32bit": {
-            "url": "https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20220426/mpv-i686-20220426-git-bb5b4b1.7z",
-            "hash": "2573eee9a38f40a95079922c21e9ab6556da6409386254dcecab56eb4aa6684b"
+            "url": "https://github.com/qwerty12/mpv-winbuild/releases/download/2022-04-26/mpv-x86_64-20220426-git-dae88f3.7z",
+            "hash": "91b07337deb9b1d7d6566f4bb4ad5e6f32964316aaa7da0683f8134247310216"
         }
     },
     "bin": "mpv.com",
@@ -30,16 +26,13 @@
     ],
     "persist": "portable_config",
     "checkver": {
-        "url": "https://github.com/shinchiro/mpv-winbuild-cmake/releases",
+        "url": "https://github.com/qwerty12/mpv-winbuild/releases",
         "regex": "/(?<date>[\\d-]+)/mpv-x86_64-(\\d+)-git-(?<commit>[\\da-f]+)\\.7z"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/$matchDate/mpv-x86_64-$version-git-$matchCommit.7z"
-            },
-            "32bit": {
-                "url": "https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/$matchDate/mpv-i686-$version-git-$matchCommit.7z"
+                "url": "https://github.com/qwerty12/mpv-winbuild/releases/download/$matchDate/mpv-x86_64-$version-git-$matchCommit.7z"
             }
         }
     }

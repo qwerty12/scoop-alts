@@ -8,7 +8,7 @@ This, not aiming to be extensive in the slightest, carries manifests bourne out 
 
 * [yt-dlp's `ffmpeg` build](https://github.com/yt-dlp/FFmpeg-Builds)
 
-* [shinchiro's nightly `mpv` build](https://github.com/shinchiro/mpv-winbuild-cmake)
+* [My *modified* nightly `mpv` builds](https://github.com/qwerty12/mpv-winbuild) (nightlies of shinchiro's mpv builds are in the main Scoop buckets)
 
 * In theory, [the very latest version of SABnzbd](https://github.com/sabnzbd/sabnzbd/releases), whether it be a release, or a beta or an RC.
 
