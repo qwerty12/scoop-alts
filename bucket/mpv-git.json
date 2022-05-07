@@ -1,5 +1,5 @@
 {
-    "version": "20220506",
+    "version": "20220507",
     "description": "Video player based on MPlayer/mplayer2 (qwerty12's *modified* nightly builds)",
     "homepage": "https://mpv.io",
     "license": "LGPL-2.1-or-later,GPL-2.0-or-later",
@@ -13,8 +13,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/qwerty12/mpv-winbuild/releases/download/2022-05-06/mpv-x86_64-20220506-git-e7034c5.7z",
-            "hash": "e8afef16cccdc6610e13226f081c2b3ae65aee9b354d96b6754467fce2515dce"
+            "url": "https://github.com/qwerty12/mpv-winbuild/releases/download/2022-05-07/mpv-x86_64-20220507-git-31b2402.7z",
+            "hash": "e816bfbb5291237775db12154119d12ec6c861a9fb4cb7bf24c9e56c0540f3a3"
         }
     },
     "bin": "mpv.com",
