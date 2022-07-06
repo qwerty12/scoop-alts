@@ -13,16 +13,5 @@
         }
     },
     "homepage": "https://github.com/hldr4/shaka-packager-mod",
-    "bin": "shaka-packager.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/hldr4/shaka-packager-mod/releases/download/v$version/shaka-packager.exe#/shaka-packager.exe"
-            },
-            "32bit": {
-                "url": "https://github.com/hldr4/shaka-packager-mod/releases/download/v$version/shaka-packager.exe#/shaka-packager.exe"
-            }
-        }
-    }
+    "bin": "shaka-packager.exe"
 }
