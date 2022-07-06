@@ -1,0 +1,44 @@
+{
+    "version": "2022.07.06.1919",
+    "description": "Daily builds of yt-dlp by github.com/ytdl-patched. Do not request support for these builds.",
+    "homepage": "https://github.com/ytdl-patched/yt-dlp",
+    "license": "Unlicense",
+    "suggest": {
+        "ffmpeg": [
+            "scoop-alts/ffmpeg-shared-nightly",
+            "ffmpeg-yt-dlp",
+            "ffmpeg"
+        ]
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ytdl-patched/yt-dlp/releases/download/2022.07.06.1919/yt-dlp.exe",
+            "hash": "sha512:c2cfddf371819669c71e4f90e1bb5b59c781319e3a86021feafcb134c7f45939a384c78d2d21b4a28521d30dc4e273f1be0ab93078a68aeb5e02a057325e7e58"
+        },
+        "32bit": {
+            "url": "https://github.com/ytdl-patched/yt-dlp/releases/download/2022.07.06.1919/yt-dlp_x86.exe#/yt-dlp.exe",
+            "hash": "sha512:1dd948e681b70795ff4ec5600dc6b26e83593484726f78070d04d0ba38c1d632b9e2be0e1756f772d009404fa99824a22364ded4d2fd909f8929c8b2f4ed0a29"
+        }
+    },
+    "bin": "yt-dlp.exe",
+    "pre_install": [
+        "$manifest.persist | ForEach-Object {",
+        "    if (-not (Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" -ItemType file | Out-Null }",
+        "}"
+    ],
+    "persist": "yt-dlp.conf",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ytdl-patched/yt-dlp/releases/download/$version/yt-dlp.exe"
+            },
+            "32bit": {
+                "url": "https://github.com/ytdl-patched/yt-dlp/releases/download/$version/yt-dlp_x86.exe#/yt-dlp.exe"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA2-512SUMS"
+        }
+    }
+}
