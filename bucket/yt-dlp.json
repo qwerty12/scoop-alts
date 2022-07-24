@@ -1,5 +1,5 @@
 {
-    "version": "2022.07.23.114514",
+    "version": "2022.07.24.40298",
     "description": "Daily builds of yt-dlp by github.com/ytdl-patched. Do not request support for these builds.",
     "homepage": "https://github.com/ytdl-patched/yt-dlp",
     "license": "Unlicense",
@@ -12,12 +12,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ytdl-patched/yt-dlp/releases/download/2022.07.23.114514/yt-dlp.exe",
-            "hash": "sha512:de4dd9cb5738851724cd63da5c47dfa1f420c2f4634464fffaa7f6ce87671f2279a946f09ae9f82cc235c08381c8b751068393c0dfa2f20f283499941db39371"
+            "url": "https://github.com/ytdl-patched/yt-dlp/releases/download/2022.07.24.40298/yt-dlp.exe",
+            "hash": "sha512:db7157c4f7ebd5563ec6ad54b46b06f264b7145b7033014d0214cf25449d178bc5190539658f2d3de964013d9e1fca655666115af76c667ae465fef6372a3b48"
         },
         "32bit": {
-            "url": "https://github.com/ytdl-patched/yt-dlp/releases/download/2022.07.23.114514/yt-dlp_x86.exe#/yt-dlp.exe",
-            "hash": "sha512:c2b95c2d198eaa7e530c1c97431ea9a0b12cd296bde655c4de3c028a103ecd61d386f818574f3af5c4ea346359cde6ce76d64130819bc992b1f632cc9b0bc45d"
+            "url": "https://github.com/ytdl-patched/yt-dlp/releases/download/2022.07.24.40298/yt-dlp_x86.exe#/yt-dlp.exe",
+            "hash": "sha512:f267df82da09b599d3905625eebae666e59bb7b7729900f76717a9057380215144ed9ff1366578676639a5b6de68b0f7da2a54259d356c938ceb35f43eac2653"
         }
     },
     "bin": "yt-dlp.exe",
