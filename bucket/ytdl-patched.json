@@ -1,5 +1,5 @@
 {
-    "version": "2022.09.11.1662892885",
+    "version": "2022.09.13.1663071608",
     "description": "yt-dlp fork with some more features",
     "homepage": "https://github.com/ytdl-patched/ytdl-patched",
     "license": "Unlicense",
@@ -11,8 +11,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ytdl-patched/ytdl-patched/releases/download/2022.09.11.1662892885/ytdl-patched-red.exe#/ytdl-patched.exe",
-            "hash": "087b765b989633ef83523dfdba5a902d8523618d364d42c2d40d8b2e8768c6cc"
+            "url": "https://github.com/ytdl-patched/ytdl-patched/releases/download/2022.09.13.1663071608/ytdl-patched-red.exe#/ytdl-patched.exe",
+            "hash": "ed2c4dbd6e9823f9d7bdd48f3bd6fb32eadcc186f9170a2cecf55a6b67dd9e4d"
         }
     },
     "bin": "ytdl-patched.exe",
@@ -22,9 +22,7 @@
         "}",
         "New-ItemProperty -Path \"HKCU:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers\" -Name \"$scoopdir\\shims\\ytdl-patched.exe\" -Value \"~ RUNASINVOKER\" -Type 'String' -Force | Out-Null"
     ],
-    "post_uninstall": [
-        "Remove-ItemProperty \"HKCU:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers\" -Name \"$scoopdir\\shims\\ytdl-patched.exe\" -ErrorAction 'SilentlyContinue' -Force"
-    ],
+    "post_uninstall": "Remove-ItemProperty \"HKCU:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers\" -Name \"$scoopdir\\shims\\ytdl-patched.exe\" -ErrorAction 'SilentlyContinue' -Force",
     "persist": "ytdl-patched.conf",
     "checkver": "github",
     "autoupdate": {
