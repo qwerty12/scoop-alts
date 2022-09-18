@@ -15,6 +15,7 @@
             "extract_dir": "Release"
         }
     },
+    "persist": "settings\\general.cfg",
     "bin": "VideoSubFinderWXW.exe",
     "shortcuts": [
         [
