@@ -1,0 +1,25 @@
+{
+    "version": "5.60",
+    "description": "Extracts hardcoded text (hardsub) from video",
+    "homepage": "https://sourceforge.net/projects/videosubfinder/",
+    "license": "Public Domain",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_5.60_x64.zip",
+            "hash": "7b503df4397acd5fe05f57e64d5ae84e3849f2f9f3575555df4b74077dd4db6e",
+            "extract_dir": "Release_x64"
+        },
+        "32bit": {
+            "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_5.60_x86.zip",
+            "hash": "649a61bcaffb8c71ac50b8b0e1436dea41f8a25d32251f10fc80f3eeb71f79f6",
+            "extract_dir": "Release"
+        }
+    },
+    "bin": "VideoSubFinderWXW.exe",
+    "shortcuts": [
+        [
+            "VideoSubFinderWXW.exe",
+            "VideoSubFinder"
+        ]
+    ]
+}
