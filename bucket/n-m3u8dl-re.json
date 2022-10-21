@@ -12,7 +12,8 @@
         "shaka-packager/mp4decrypt": [
             "scoop-alts/shaka-packager-mod",
             "bento4"
-        ]
+        ],
+        "mkvmerge": "mkvtoolnix"
     },
     "architecture": {
         "64bit": {
