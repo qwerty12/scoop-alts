@@ -1,18 +1,18 @@
 {
-    "version": "108766",
+    "version": "108771",
     "description": "A complete, cross-platform solution to record, convert and stream audio and video. (yt-dlp build)",
     "homepage": "https://ffmpeg.org",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2022-10-20-13-19/ffmpeg-N-108766-geb9153b4a7-win64-gpl-shared.zip",
-            "hash": "8f0656e3c259da94d159880f2f85ba250215151b115d071020be457b66d37ef1",
-            "extract_dir": "ffmpeg-N-108766-geb9153b4a7-win64-gpl-shared"
+            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2022-10-21-13-14/ffmpeg-N-108771-g4cfffdd551-win64-gpl-shared.zip",
+            "hash": "f6e51463d0846b3c9025ad62067800efea78f6f9f3a802311e9d3521d4ee0f9a",
+            "extract_dir": "ffmpeg-N-108771-g4cfffdd551-win64-gpl-shared"
         },
         "32bit": {
-            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2022-10-20-13-19/ffmpeg-N-108766-geb9153b4a7-win32-gpl-shared.zip",
-            "hash": "b03005eca4df32d98c19fa0a1a200157d7dcbd0322b79ce788d1182b223649fd",
-            "extract_dir": "ffmpeg-N-108766-geb9153b4a7-win32-gpl-shared"
+            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2022-10-21-13-14/ffmpeg-N-108771-g4cfffdd551-win32-gpl-shared.zip",
+            "hash": "8cd2e06f010aa258d69f4fb92b6838c155575377db1fe5aaabecea5d6123179a",
+            "extract_dir": "ffmpeg-N-108771-g4cfffdd551-win32-gpl-shared"
         }
     },
     "bin": [
@@ -21,7 +21,7 @@
         "bin\\ffprobe.exe"
     ],
     "checkver": {
-        "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases",
+        "url": "https://api.github.com/repos/yt-dlp/FFmpeg-Builds/releases?per_page=2",
         "regex": "/autobuild-(?<time>[\\d-]+)/ffmpeg-N-(\\d+)-g(?<hash>[a-z\\d]+)-win64-gpl-shared\\.zip"
     },
     "autoupdate": {
