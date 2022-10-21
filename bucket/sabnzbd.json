@@ -41,7 +41,7 @@
         "}"
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/sabnzbd/sabnzbd/releases",
+        "url": "https://api.github.com/repos/sabnzbd/sabnzbd/releases?per_page=1",
         "jsonpath": "$[0].tag_name"
     },
     "autoupdate": {
