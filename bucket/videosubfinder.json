@@ -3,6 +3,12 @@
     "description": "Extracts hardcoded text (hardsub) from video",
     "homepage": "https://sourceforge.net/projects/videosubfinder/",
     "license": "Public Domain",
+    "suggest": {
+        "vcredist": [
+            "extras/vcredist2019",
+            "extras/vcredist-aio"
+        ]
+    },
     "architecture": {
         "64bit": {
             "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_5.60_x64.zip",

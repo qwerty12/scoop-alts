@@ -1,7 +1,13 @@
 {
     "version": "1.5.20",
-    "description": "An automatic subtitle shifter from a video to another based on audio spectrum",
+    "description": "An automatic subtitle shifter from a video to another based on audio spectrum (AVX2 build)",
     "license": "MIT",
+    "suggest": {
+        "vcredist": [
+            "extras/vcredist2019",
+            "extras/vcredist-aio"
+        ]
+    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/Thomasyse/BDMatch/releases/download/1.5.20/BDMatch_v1.5.20_AVX2.zip",
