@@ -1,10 +1,10 @@
 on:
   workflow_dispatch:
   schedule:
-    # run every 3 hours
-    - cron: '20 11/3 * * *'
-    # special case: ffmpeg and mpv usually appear around 13:00 UTC
-    - cron: '30 13,14 * * *'
+    # run every 4 hours from 08:00 UTC
+    - cron: '20 8/4 * * *'
+    # special case: ffmpeg and mpv usually appear around 13:00-16:00 UTC
+    - cron: '30 13-15 * * *'
 name: Excavator
 jobs:
   excavate:
