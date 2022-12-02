@@ -5,6 +5,7 @@
     "license": "Unlicense",
     "suggest": {
         "ffmpeg": [
+            "scoop-alts/ffmpeg-shared-nightly",
             "ffmpeg-yt-dlp",
             "ffmpeg"
         ]
