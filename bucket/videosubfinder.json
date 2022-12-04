@@ -12,21 +12,40 @@
     "architecture": {
         "64bit": {
             "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_5.60_x64.zip",
-            "hash": "7b503df4397acd5fe05f57e64d5ae84e3849f2f9f3575555df4b74077dd4db6e",
+            "hash": "sha1:b7112a6dcc100c2f0cc799077436ecbbe8892ebd",
             "extract_dir": "Release_x64"
         },
         "32bit": {
             "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_5.60_x86.zip",
-            "hash": "649a61bcaffb8c71ac50b8b0e1436dea41f8a25d32251f10fc80f3eeb71f79f6",
+            "hash": "sha1:d7e4343e8f3acaa9a84ecdeb8d8be9abd4215e77",
             "extract_dir": "Release"
         }
     },
-    "persist": "settings\\general.cfg",
+    "persist": [
+        "settings\\general.cfg",
+        "TXTImages",
+        "TXTImagesJoined",
+        "TXTResults"
+    ],
     "bin": "VideoSubFinderWXW.exe",
     "shortcuts": [
         [
             "VideoSubFinderWXW.exe",
             "VideoSubFinder"
         ]
-    ]
+    ],
+    "checkver": {
+        "sourceforge": "videosubfinder/",
+        "regex": "VideoSubFinder_([\\d.+]+)_x64.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_$version_x64.zip"
+            },
+            "32bit": {
+                "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_$version_x86.zip"
+            }
+        }
+    }
 }
