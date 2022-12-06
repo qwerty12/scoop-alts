@@ -1,5 +1,5 @@
 {
-    "version": "3.7.1RC1",
+    "version": "3.7.1RC2",
     "description": "The automated Usenet download tool (Beta/RC if available)",
     "homepage": "https://sabnzbd.org",
     "license": "GPL-2.0-or-later",
@@ -9,15 +9,15 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sabnzbd/sabnzbd/releases/download/3.7.1RC1/SABnzbd-3.7.1RC1-win64-bin.zip",
-            "hash": "f3a5ffc62b8e15571dc486cc37524a69e5e03fbe5571e7b8171fb736ffa55df3"
+            "url": "https://github.com/sabnzbd/sabnzbd/releases/download/3.7.1RC2/SABnzbd-3.7.1RC2-win64-bin.zip",
+            "hash": "49c47056adf5f430836a40cb16078548966e8daf3480a078a84e4aac9f2d836f"
         },
         "32bit": {
-            "url": "https://github.com/sabnzbd/sabnzbd/releases/download/3.7.1RC1/SABnzbd-3.7.1RC1-win32-bin.zip",
-            "hash": "7c7cd627208480407be6bda02f35c80dea341977f7eeb8ba8a3435b98bce306d"
+            "url": "https://github.com/sabnzbd/sabnzbd/releases/download/3.7.1RC2/SABnzbd-3.7.1RC2-win32-bin.zip",
+            "hash": "9a5cac5f09f71c5a20d0838902ee50e4e82c5b34cb5dbbb4b8294c1fcb6d92ba"
         }
     },
-    "extract_dir": "SABnzbd-3.7.1RC1",
+    "extract_dir": "SABnzbd-3.7.1RC2",
     "bin": [
         "SABnzbd-console.exe",
         [
