@@ -1,5 +1,5 @@
 {
-    "version": "0.1.5-beta+20221212",
+    "version": "0.1.5-beta+20221212132503",
     "description": "DASH/HLS/MSS stream downloader supporting on-demand & live broadcasts",
     "homepage": "https://github.com/nilaoda/N_m3u8DL-RE",
     "license": "MIT",
@@ -18,21 +18,30 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.1.5-beta/N_m3u8DL-RE_Beta_win-x64_20221212.zip",
-            "hash": "63adbe3f8387a52dce397f21fe1a291f26b2eb04916d1c69b841683f488385c6",
+            "hash": "1b7170baf52bcfc84e86468d8c550883ef2c660bbb1b2d8e0a57c2a8363ab9b7",
             "extract_dir": "N_m3u8DL-RE_Beta_win-x64"
         }
     },
     "bin": "N_m3u8DL-RE.exe",
     "checkver": {
-        "url": "https://api.github.com/repos/nilaoda/N_m3u8DL-RE/releases?per_page=1",
-        "jsonpath": "$[0].assets",
-        "regex": "/v(?<realver>[\\w.-]+)/N_m3u8DL-RE_(?<phase>[A-Za-z]+_)?win-x64_(?<date>\\d+)\\.zip",
-        "replace": "${realver}+${date}"
+        "script": [
+            "$cont = (Invoke-RestMethod -UseBasicParsing -Method Get -Headers @{'Accept'='application/vnd.github+json';'Accept-Encoding'='gzip'} -MaximumRedirection 0 -Uri 'https://api.github.com/repos/nilaoda/N_m3u8DL-RE/releases?per_page=1')[0]",
+            "$basever = $cont.tag_name.TrimStart('v')",
+            "foreach ($_ in $cont.assets) {",
+            "  if ($_.name -cmatch '^N_m3u8DL-RE_(?<phase>[A-Za-z]+_)?win-x64_(?<date>\\d+)\\.zip$') {",
+            "    $updated_date = ([DateTime]$_.updated_at).ToString('yyyyMMddHHmmss')",
+            "    Write-Output ('basever:\"' + $basever + '\"') ('phase:\"' + $matches.phase + '\"') ('date:\"' + $matches.date + '\"') ('updated_date:\"' + $updated_date + '\"')",
+            "    break",
+            "  }",
+            "}"
+        ],
+        "regex": "basever:\"(?<basever>[\\w.-]+)\"\\sphase:\"(?<phase>[A-Za-z]+_)?\"\\sdate:\"(?<date>\\d+)\"\\supdated_date:\"(?<updated_date>\\d+)\"",
+        "replace": "${basever}+${updated_date}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v$matchRealver/N_m3u8DL-RE_$matchPhasewin-x64_$matchDate.zip",
+                "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v$matchBasever/N_m3u8DL-RE_$matchPhasewin-x64_$matchDate.zip",
                 "extract_dir": "N_m3u8DL-RE_$matchPhasewin-x64"
             }
         }
