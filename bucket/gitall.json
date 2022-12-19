@@ -16,14 +16,5 @@
             "extract_dir": "gitall-v0.6.0-x86_64-pc-windows-msvc"
         }
     },
-    "bin": "gitall.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/mattmahn/gitall.rs/releases/download/v$version/gitall-v$version-x86_64-pc-windows-msvc.zip",
-                "extract_dir": "gitall-v$version-x86_64-pc-windows-msvc"
-            }
-        }
-    }
+    "bin": "gitall.exe"
 }
