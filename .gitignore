@@ -3,3 +3,7 @@
 ._*
 page.html
 checkver-*.html
+/*.patch
+/*.diff
+*.rej
+*.orig
