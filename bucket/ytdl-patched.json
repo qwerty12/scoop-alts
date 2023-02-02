@@ -1,5 +1,5 @@
 {
-    "version": "2023.02.02.1675340048",
+    "version": "2023.02.02.1675361402",
     "description": "yt-dlp fork with some more features",
     "homepage": "https://github.com/ytdl-patched/ytdl-patched",
     "license": "Unlicense",
@@ -12,8 +12,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ytdl-patched/ytdl-patched/releases/download/2023.02.02.1675340048/ytdl-patched-red.exe#/ytdl-patched.exe",
-            "hash": "9656160cff76a905d575088b933f4bb6a4e5387ca38e8c5be405448c5ef235a2"
+            "url": "https://github.com/ytdl-patched/ytdl-patched/releases/download/2023.02.02.1675361402/ytdl-patched-red.exe#/ytdl-patched.exe",
+            "hash": "528fbadbea38cfa3ba7224d6a8351cedb17afa3954c5ee2f408dff658f607120"
         }
     },
     "bin": "ytdl-patched.exe",
