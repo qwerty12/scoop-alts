@@ -1,0 +1,39 @@
+{
+    "version": "8a92bd3a6d",
+    "description": "Globally set File Explorer folder views (*nightly* build)",
+    "homepage": "https://github.com/LesFerch/WinSetView",
+    "license": "MIT",
+    "url": "https://github.com/LesFerch/WinSetView/archive/8a92bd3a6d7331c297fa704354b734dde68d201d.zip",
+    "hash": "05d7ef48e5a8d9dd09a70e6f6a3190662344f202c18b54828ba26db3c06dcff3",
+    "extract_dir": "WinSetView-8a92bd3a6d7331c297fa704354b734dde68d201d",
+    "pre_install": "if (-not (Test-Path \"$persist_dir\\AppData\\Backup\")) { New-Item \"$dir\\AppData\\Backup\" -ItemType Directory | Out-Null }",
+    "post_install": [
+        "$mshta = \"C:\\Windows\\System32\\mshta.exe\"",
+        "$winsetviewhta = \"\"\"$dir\\WinSetView.hta\"\"\"",
+        "# Shim creation",
+        "shim $mshta $global \"WinSetView\" $winsetviewhta",
+        "# Shortcut creation",
+        "$scoop_startmenu_folder = shortcut_folder $global",
+        "$wsShell = (New-Object -ComObject WScript.Shell).CreateShortcut(\"$scoop_startmenu_folder\\WinSetView.lnk\")",
+        "$wsShell.TargetPath = \"$mshta\"",
+        "$wsShell.WorkingDirectory = \"\"\"$dir\"\"\"",
+        "$wsShell.Arguments = $winsetviewhta",
+        "$wsShell.IconLocation = \"$dir\\AppParts\\WinSetView.ico\"",
+        "$wsShell.Save()"
+    ],
+    "post_uninstall": [
+        "rm_shim WinSetView (shimdir $global) $app",
+        "$scoop_startmenu_folder = shortcut_folder $global",
+        "Remove-Item \"$scoop_startmenu_folder\\WinSetView.lnk\" -Force"
+    ],
+    "persist": "AppData\\Backup",
+    "checkver": {
+        "url": "https://github.com/LesFerch/WinSetView/commits/main.atom",
+        "regex": "(?ms)<id[^>]*>\\s*\\S+/(?<sha>(?<shortSha>[0-9a-f]{10})[0-9a-f]*)\\s*</id>",
+        "replace": "${shortSha}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/LesFerch/WinSetView/archive/$matchSha.zip",
+        "extract_dir": "WinSetView-$matchSha"
+    }
+}
