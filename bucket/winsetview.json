@@ -6,7 +6,7 @@
     "url": "https://github.com/LesFerch/WinSetView/archive/8a92bd3a6d7331c297fa704354b734dde68d201d.zip",
     "hash": "05d7ef48e5a8d9dd09a70e6f6a3190662344f202c18b54828ba26db3c06dcff3",
     "extract_dir": "WinSetView-8a92bd3a6d7331c297fa704354b734dde68d201d",
-    "pre_install": "if (-not (Test-Path \"$persist_dir\\AppData\\Backup\")) { New-Item \"$dir\\AppData\\Backup\" -ItemType Directory | Out-Null }",
+    "pre_install": "$manifest.persist | ForEach-Object { if (-not (Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" -Force -ItemType \"Directory\" | Out-Null } }",
     "post_install": [
         "$mshta = \"C:\\Windows\\System32\\mshta.exe\"",
         "$winsetviewhta = \"\"\"$dir\\WinSetView.hta\"\"\"",
@@ -26,7 +26,10 @@
         "$scoop_startmenu_folder = shortcut_folder $global",
         "Remove-Item \"$scoop_startmenu_folder\\WinSetView.lnk\" -Force"
     ],
-    "persist": "AppData\\Backup",
+    "persist": [
+        "AppData\\Backup",
+        "Tools\\WinViewBak"
+    ],
     "checkver": {
         "url": "https://github.com/LesFerch/WinSetView/commits/main.atom",
         "regex": "(?ms)<id[^>]*>\\s*\\S+/(?<sha>(?<shortSha>[0-9a-f]{10})[0-9a-f]*)\\s*</id>",
