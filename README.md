@@ -12,7 +12,7 @@ This, not aiming to be extensive in the slightest, carries manifests bourne out 
 
 * [The very latest version of SABnzbd](https://github.com/sabnzbd/sabnzbd/releases), whether it be a release, or a beta or an RC.
 
-Thanks to the original authors of the manifests from the default Scoop buckets I copied these from:
+Thanks to the original authors of the manifests from the default Scoop buckets I copied some of these from:
 
 * https://raw.githubusercontent.com/ScoopInstaller/Versions/master/bucket/ffmpeg-shared-nightly.json
 
@@ -25,6 +25,10 @@ Thanks to the original authors of the manifests from the default Scoop buckets I
 * https://raw.githubusercontent.com/ScoopInstaller/Main/master/bucket/yt-dlp.json
 
 * https://github.com/404NetworkError/scoop-bucket/blob/main/bucket/winsetview-nightly.json
+
+* https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/ungoogled-chromium.json
+
+* https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/googlechrome.json
 
 How do I install these manifests?
 ---------------------------------
