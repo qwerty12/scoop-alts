@@ -30,6 +30,8 @@ Thanks to the original authors of the manifests from the default Scoop buckets I
 
 * https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/googlechrome.json
 
+* https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/fastcopy.json
+
 How do I install these manifests?
 ---------------------------------
 
