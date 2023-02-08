@@ -7,7 +7,7 @@
     "hash": "ef28b89b2ef8ad604a2c337e0d323d254ed898930c0e935a53e3d73d5807000f",
     "installer": {
         "script": [
-            "$dest = \"$dir\\CertificateRevocation\\$version\"",
+            "$dest = \"$dir\\CertificateRevocation\"",
             "Expand-7zipArchive \"$dir\\$fname\" $dest -Removal",
             "Set-Content \"$dest\\manifest.fingerprint\" \"1.$($manifest.hash)\" -NoNewline"
         ]
