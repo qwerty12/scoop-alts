@@ -9,22 +9,35 @@
             "extras/vcredist-aio"
         ]
     },
+    "notes": [
+        "If upgrading, you might need to manually merge settings\\general.cfg with settings.original\\general.cfg.",
+        "Older versions may not start due to possible settings\\eng\\locale.cfg incompatibilities."
+    ],
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_5.70_x64.zip",
+            "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_5.70_x64.zip#/dl.zip_",
             "hash": "sha1:c9dfdf3649cba4f32adde7b21de5150644190e1d",
             "extract_dir": "Release_x64"
         },
         "32bit": {
-            "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_5.70_x86.zip",
+            "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_5.70_x86.zip#/dl.zip_",
             "hash": "sha1:0640359a05ed98302743304c6efd176f0a017702",
             "extract_dir": "Release"
         }
     },
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\$fname\" \"$dir\" -ExtractDir \"$(extract_dir $manifest $architecture)\" -Removal",
+            "if ((Test-Path \"$persist_dir\\settings\" -PathType Container)) {",
+            "    Move-Item -Path \"$dir\\settings\\eng\\*\" -Destination \"$persist_dir\\settings\\eng\" -Force",
+            "    Remove-Item \"$dir\\settings\\eng\" | Out-Null",
+            "}"
+        ]
+    },
+    "post_install": "$manifest.persist | Where { $_ -ne 'settings' } | ForEach-Object { if (Test-Path \"$dir\\$_.original\" -PathType Container) { Remove-Item \"$dir\\$_.original\" | Out-Null } }",
     "persist": [
-        "settings\\general.cfg",
+        "settings",
         "TXTImages",
-        "TXTImagesJoined",
         "TXTResults"
     ],
     "bin": "VideoSubFinderWXW.exe",
@@ -41,10 +54,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_$version_x64.zip"
+                "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_$version_x64.zip#/dl.zip_"
             },
             "32bit": {
-                "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_$version_x86.zip"
+                "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_$version_x86.zip#/dl.zip_"
             }
         }
     }
