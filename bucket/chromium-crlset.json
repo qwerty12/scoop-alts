@@ -3,7 +3,7 @@
     "description": "Chromium's certificate revocation list",
     "homepage": "https://www.chromium.org/Home/chromium-security/crlsets/",
     "license": "BSD-3-Clause",
-    "url": "https://www.google.com/dl/release2/chrome_component/adlzy2ab5n573dwsdh2morkgjpva_7855/hfnkpimlhhgieaddgfemjhofmfblmnib_7855_all_gqzkknmcqynwx54c7nrpadpw44.crx3#/dl.crx3",
+    "url": "https://www.google.com/dl/release2/chrome_component/adlzy2ab5n573dwsdh2morkgjpva_7855/hfnkpimlhhgieaddgfemjhofmfblmnib_7855_all_gqzkknmcqynwx54c7nrpadpw44.crx3",
     "hash": "0340c2be095c7d82dd5bce03c1f6d5cb43a19850222a4430415600f03dadc322",
     "installer": {
         "script": [
@@ -22,6 +22,6 @@
         "regex": "version:\"(\\d+)\"\\surl:\"(?:https://.+/(?<urlone>.+)/(?<basename>.+)\\.crx3)\""
     },
     "autoupdate": {
-        "url": "https://www.google.com/dl/release2/chrome_component/$matchUrlone/$matchBasename.crx3#/dl.crx3"
+        "url": "https://www.google.com/dl/release2/chrome_component/$matchUrlone/$matchBasename.crx3"
     }
 }
