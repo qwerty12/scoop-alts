@@ -19,7 +19,7 @@
             "$cont = $cont.gupdate.app.updatecheck",
             "Write-Output ('version:\"' + $cont.version + '\"') ('url:\"' + $cont.codebase + '\"')"
         ],
-        "regex": "version:\"(\\d+)\"\\surl:\"(?:https://.+/(?<urlone>.+)/(?<basename>.+)\\.crx3)\""
+        "regex": "version:\"(\\d+)\"\\surl:\"(?:https?://.+/(?<urlone>.+)/(?<basename>.+)\\.crx3)\""
     },
     "autoupdate": {
         "url": "https://www.google.com/dl/release2/chrome_component/$matchUrlone/$matchBasename.crx3"
