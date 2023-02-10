@@ -36,8 +36,9 @@
     },
     "post_install": [
         "$manifest.persist | ForEach-Object {",
-        "    if ((Test-Path \"$dir\\$_.original\" -PathType Container) -and ([System.IO.Directory]::GetFiles(\"$dir\\$_.original\", '*').Count -eq 0)) {",
-        "        Remove-Item \"$dir\\$_.original\" | Out-Null",
+        "    $origdir = \"$dir\\$_.original\"",
+        "    if ((Test-Path $origdir -PathType Container) -and ([System.IO.Directory]::GetFiles($origdir, '*').Count -eq 0)) {",
+        "        Remove-Item $origdir -Force | Out-Null",
         "    }",
         "}"
     ],
