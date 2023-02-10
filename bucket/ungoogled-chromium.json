@@ -43,8 +43,8 @@
         "regex": "releases/tag/((?<main>[\\d.]+-\\d).(?<release>\\d))"
     },
     "pre_install": [
-        "if (-not (Test-Path \"$persist_dir\\initial_preferences\")) { New-Item \"$dir\\initial_preferences\" -Force -ItemType \"File\" | Out-Null }",
-        "$manifest.persist | Where { $_ -ne 'initial_preferences' } | ForEach-Object { if (-not (Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" -Force -ItemType \"Directory\" | Out-Null } }"
+        "if (-not (Test-Path \"$persist_dir\\initial_preferences\")) { New-Item \"$dir\\initial_preferences\" -Force -ItemType File | Out-Null }",
+        "$manifest.persist | ForEach-Object { if ((-not (Test-Path \"$persist_dir\\$_\")) -and (-not (Test-Path \"$dir\\$_\" -PathType Leaf))) { New-Item \"$dir\\$_\" -Force -ItemType \"Directory\" | Out-Null } }"
     ],
     "post_install": [
         "New-Item -Path \"$dir\\WidevineCdm\" -Target \"$(versiondir 'widevinecdm' 'current' $global)\\WidevineCdm\" -ItemType Junction -Force | Out-Null",
