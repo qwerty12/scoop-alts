@@ -34,7 +34,13 @@
             "}"
         ]
     },
-    "post_install": "$manifest.persist | Where { $_ -ne 'settings' } | ForEach-Object { if (Test-Path \"$dir\\$_.original\" -PathType Container) { Remove-Item \"$dir\\$_.original\" | Out-Null } }",
+    "post_install": [
+        "$manifest.persist | ForEach-Object {",
+        "    if ((Test-Path \"$dir\\$_.original\" -PathType Container) -and ([System.IO.Directory]::GetFiles(\"$dir\\$_.original\", '*').Count -eq 0)) {",
+        "        Remove-Item \"$dir\\$_.original\" | Out-Null",
+        "    }",
+        "}"
+    ],
     "persist": [
         "settings",
         "TXTImages",
