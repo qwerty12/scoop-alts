@@ -2,11 +2,11 @@ on:
   workflow_dispatch:
   schedule:
     # main:
-    - cron: '20 4-5,8/4,19 * * *'
+    - cron: '20 4-5,8/4 * * *'
     # special case: ffmpeg and mpv usually appear around 13:00-16:00 UTC
     - cron: '30 13-15 * * *'
     # pick up straggling ungoogled-chromium builds:
-    - cron: '20 0 * * *'
+    - cron: '30 0 * * *'
 name: Excavator
 jobs:
   excavate:
