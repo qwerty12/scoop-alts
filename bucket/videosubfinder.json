@@ -20,8 +20,8 @@
             "extract_dir": "Release_x64"
         },
         "32bit": {
-            "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_5.70_x86.zip#/dl.zip_",
-            "hash": "sha1:0640359a05ed98302743304c6efd176f0a017702",
+            "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_5.70_x86_fixed.zip#/dl.zip_",
+            "hash": "6b5bab08ea283045d170fe0beafcb33e6c21ce02e36ae4a8a3ee668e1e141cdd",
             "extract_dir": "Release"
         }
     },
