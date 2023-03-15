@@ -47,11 +47,18 @@
         "TXTImages",
         "TXTResults"
     ],
-    "bin": "VideoSubFinderWXW.exe",
+    "bin": [
+        "VideoSubFinderWXW.exe",
+        "VideoSubFinderWXW_intel.exe"
+    ],
     "shortcuts": [
         [
             "VideoSubFinderWXW.exe",
             "VideoSubFinder"
+        ],
+        [
+            "VideoSubFinderWXW_intel.exe",
+            "VideoSubFinder (Intel CC)"
         ]
     ],
     "checkver": {
