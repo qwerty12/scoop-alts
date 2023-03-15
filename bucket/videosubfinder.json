@@ -1,5 +1,5 @@
 {
-    "version": "5.70",
+    "version": "5.80",
     "description": "Extracts hardcoded text (hardsub) from video",
     "homepage": "https://sourceforge.net/projects/videosubfinder/",
     "license": "Public Domain",
@@ -15,13 +15,13 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_5.70_x64.zip#/dl.zip_",
-            "hash": "sha1:c9dfdf3649cba4f32adde7b21de5150644190e1d",
+            "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_5.80_x64.zip#/dl.zip_",
+            "hash": "sha1:6f8b166e78c36b274f75534b857a26e08a6bce2b",
             "extract_dir": "Release_x64"
         },
         "32bit": {
-            "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_5.70_x86_fixed.zip#/dl.zip_",
-            "hash": "6b5bab08ea283045d170fe0beafcb33e6c21ce02e36ae4a8a3ee668e1e141cdd",
+            "url": "https://downloads.sourceforge.net/project/videosubfinder/VideoSubFinder_5.80_x86.zip#/dl.zip_",
+            "hash": "sha1:594932ec69107f919c512fd398792aa67fb5ac2c",
             "extract_dir": "Release"
         }
     },
