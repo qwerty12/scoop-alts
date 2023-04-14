@@ -2,7 +2,7 @@
     "version": "6.00",
     "description": "Extracts hardcoded text (hardsub) from video",
     "homepage": "https://sourceforge.net/projects/videosubfinder/",
-    "license": "Public Domain",
+    "license": "GPL-2.0-only",
     "suggest": {
         "vcredist": [
             "extras/vcredist2019",
@@ -10,8 +10,8 @@
         ]
     },
     "notes": [
-        "If upgrading, you might need to manually merge settings\\general.cfg with settings.original\\general.cfg.",
-        "Older versions may not start due to possible settings\\eng\\locale.cfg incompatibilities."
+        "If upgrading, you might need to manually merge settings\\general.cfg with changes in settings.original\\general.cfg.",
+        "Older installed versions may not start due to possible settings\\eng\\locale.cfg incompatibilities."
     ],
     "architecture": {
         "64bit": {
