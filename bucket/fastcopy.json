@@ -1,13 +1,13 @@
 {
-    "version": "4.2.2",
+    "version": "5.0.2",
     "description": "The Fastest copy/backup software.",
     "homepage": "https://fastcopy.jp",
     "license": {
         "identifier": "Freeware",
         "url": "https://fastcopy.jp/help/fastcopy_eng.htm#license"
     },
-    "url": "https://fastcopy.jp/archive/FastCopy4.2.2_installer.exe",
-    "hash": "1192ff6459440840df651c2e4049a6db3fbafa0d6809637db3092a7c0f19ba33",
+    "url": "https://fastcopy.jp/archive/FastCopy5.0.2_installer.exe",
+    "hash": "b15ed66a8e5b88b81899bf2c161dc7fa9e8827866139589855ab9391044c859b",
     "pre_install": [
         "if ($architecture -eq '64bit') {Invoke-ExternalCommand \"$dir\\$fname\" '/EXTRACT64' | Out-Null }",
         "elseif ($architecture -eq '32bit') {Invoke-ExternalCommand \"$dir\\$fname\" '/EXTRACT32' | Out-Null }",
@@ -37,7 +37,10 @@
         "Log",
         "FastCopy.log"
     ],
-    "checkver": "FastCopy ver ([\\d.]+)",
+    "checkver": {
+        "script": "(Invoke-WebRequest -UseBasicParsing -Method Get -Headers @{'Accept'='text/html';'Accept-Encoding'='gzip'} -MaximumRedirection 0 -Uri 'https://fastcopy.jp/').Content",
+        "regex": "FastCopy ver ([\\d.]+)"
+    },
     "autoupdate": {
         "url": "https://fastcopy.jp/archive/FastCopy$version_installer.exe"
     }
