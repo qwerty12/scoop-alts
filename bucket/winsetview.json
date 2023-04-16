@@ -34,7 +34,7 @@
         "script": [
             "$cont = (Invoke-RestMethod -UseBasicParsing -Method Get -Headers @{'Accept-Encoding'='gzip'} -MaximumRedirection 0 -Uri 'https://github.com/LesFerch/WinSetView/commits/main.atom')[0]",
             "$id = $cont.id",
-            "$commit_timestamp = ([DateTime]$cont.updated).ToString('yyyyMMddHHmmss')",
+            "$commit_timestamp = ([DateTime]$cont.updated).ToUniversalTime().ToString('yyyyMMddHHmmss')",
             "Write-Output ('id:\"' + $id + '\"') ('commit_timestamp:\"' + $commit_timestamp + '\"')"
         ],
         "regex": "id:\"(\\s*\\S+/(?<sha>(?<shortSha>[0-9a-f]{10})[0-9a-f]*)\\s*)\"\\scommit_timestamp:\"(?<commit_timestamp>\\d+)\"",

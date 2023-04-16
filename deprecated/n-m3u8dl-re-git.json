@@ -28,7 +28,7 @@
             "$cont = Invoke-RestMethod -UseBasicParsing -Method Get -Headers @{'Accept'='application/vnd.github+json';'Accept-Encoding'='gzip'} -MaximumRedirection 0 -Uri $url",
             "$workflow_run = $cont.workflow_runs[0]",
             "$commit = $workflow_run.head_sha.Trim().SubString(0,7)",
-            "$created_date = ([DateTime]$workflow_run.created_at).ToString('yyyyMMddHHmmss')",
+            "$created_date = ([DateTime]$workflow_run.created_at).ToUniversalTime().ToString('yyyyMMddHHmmss')",
             "$id = $workflow_run.id",
             "Write-Output ('commit:\"' + $commit + '\"') ('date:\"' + $created_date + '\"') ('id:\"' + $id + '\"')"
         ],
