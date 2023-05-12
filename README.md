@@ -12,6 +12,13 @@ This, not aiming to be extensive in the slightest, carries manifests bourne out 
 
 * [The very latest version of SABnzbd](https://github.com/sabnzbd/sabnzbd/releases), whether it be a release, or a beta or an RC.
 
+How do I install these manifests?
+---------------------------------
+
+To add this bucket, run `scoop bucket add scoop-alts https://github.com/qwerty12/scoop-alts`. To install, do `scoop install scoop-alts/<manifest>`.
+
+---------------------------------
+
 Thanks to the original authors of the manifests from the default Scoop buckets I copied some of these from:
 
 * https://raw.githubusercontent.com/ScoopInstaller/Versions/master/bucket/ffmpeg-shared-nightly.json
@@ -32,7 +39,4 @@ Thanks to the original authors of the manifests from the default Scoop buckets I
 
 * https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/fastcopy.json
 
-How do I install these manifests?
----------------------------------
-
-To add this bucket, run `scoop bucket add scoop-alts https://github.com/qwerty12/scoop-alts`. To install, do `scoop install scoop-alts/<manifest>`.
+* https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/vscode.json
