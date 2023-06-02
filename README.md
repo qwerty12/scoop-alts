@@ -19,7 +19,9 @@ To add this bucket, run `scoop bucket add scoop-alts https://github.com/qwerty12
 
 ---------------------------------
 
-Thanks to the original authors of the manifests from the default Scoop buckets I copied some of these from:
+<details>
+
+<summary>Thanks to the original authors of the manifests from the default Scoop buckets I copied some of these from:</summary>
 
 * https://raw.githubusercontent.com/ScoopInstaller/Versions/master/bucket/ffmpeg-shared-nightly.json
 
@@ -42,3 +44,4 @@ Thanks to the original authors of the manifests from the default Scoop buckets I
 * https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/vscode.json
 
 * https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/syncthingtray.json
+</details>
