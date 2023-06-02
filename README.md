@@ -40,3 +40,5 @@ Thanks to the original authors of the manifests from the default Scoop buckets I
 * https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/fastcopy.json
 
 * https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/vscode.json
+
+* https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/syncthingtray.json
