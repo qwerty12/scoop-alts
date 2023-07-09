@@ -44,4 +44,6 @@ To add this bucket, run `scoop bucket add scoop-alts https://github.com/qwerty12
 * https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/vscode.json
 
 * https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/syncthingtray.json
+
+* https://github.com/ScoopInstaller/Nonportable/blob/master/bucket/openhashtab-np.json
 </details>

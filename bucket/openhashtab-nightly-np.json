@@ -1,0 +1,35 @@
+{
+    "version": "ed77048+20230702113004",
+    "homepage": "https://github.com/namazso/OpenHashTab",
+    "description": "Shell extension for conveniently calculating and checking file hashes from file properties",
+    "license": "GPL-3.0",
+    "url": "https://nightly.link/namazso/OpenHashTab/actions/runs/5436287429/setup.zip",
+    "hash": "fd6712a3ad517b4041fbf648bd214d22c957e9d23f6ed81e6f51f084d6b3eb49",
+    "post_install": [
+        "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+        "if (-not $global) { error \"$app must be installed with --global\"; break }",
+        "Start-Process \"$dir\\OpenHashTab_setup.exe\" -Wait -Verb 'RunAs' -Args @('/VERYSILENT', \"/DIR=$dir\", '/ALLUSERS', '/SUPPRESSMSGBOXES', '/MERGETASKS=\"!myContextMenu\"')",
+        "Remove-Item \"$dir\\OpenHashTab_setup.exe\""
+    ],
+    "pre_uninstall": [
+        "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+        "Start-Process \"$dir\\unins000.exe\" -Wait -Verb 'RunAs' -ArgumentList @('/VERYSILENT', '/FORCECLOSEAPPLICATIONS', '/SUPPRESSMSGBOXES')",
+        "Stop-Process -Name 'explorer' -Force -ErrorAction 'SilentlyContinue'; Start-Sleep -Seconds 2"
+    ],
+    "checkver": {
+        "script": [
+            "$url = 'https://api.github.com/repositories/223322895/actions/workflows/ci.yml/runs?branch=master&status=success&per_page=1&exclude_pull_requests=true'",
+            "$cont = Invoke-RestMethod -UseBasicParsing -Method Get -Headers @{'Accept'='application/vnd.github+json';'Accept-Encoding'='gzip'} -MaximumRedirection 0 -Uri $url",
+            "$workflow_run = $cont.workflow_runs[0]",
+            "$commit = $workflow_run.head_sha.Trim().SubString(0,7)",
+            "$created_date = ([DateTime]$workflow_run.created_at).ToUniversalTime().ToString('yyyyMMddHHmmss')",
+            "$id = $workflow_run.id",
+            "Write-Output ('commit:\"' + $commit + '\"') ('date:\"' + $created_date + '\"') ('id:\"' + $id + '\"')"
+        ],
+        "regex": "commit:\"(?<commit>[\\w\\d]+)\"\\sdate:\"(?<date>\\d+)\"\\sid:\"(?<id>\\d+)\"",
+        "replace": "${commit}+${date}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/namazso/OpenHashTab/actions/runs/$matchId/setup.zip"
+    }
+}
