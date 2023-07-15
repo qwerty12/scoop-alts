@@ -1,10 +1,10 @@
 {
-    "version": "5e21dc6+20230715132630",
+    "version": "8e03f64+20230715184154",
     "homepage": "https://github.com/namazso/OpenHashTab",
     "description": "Shell extension for conveniently calculating and checking file hashes from file properties",
     "license": "GPL-3.0",
-    "url": "https://nightly.link/namazso/OpenHashTab/actions/runs/5562463167/setup.zip",
-    "hash": "188bfbbc96dca3ddaac0d36a49e2ee1c4b90615c99cb9797f7082a017cfa0fdd",
+    "url": "https://nightly.link/namazso/OpenHashTab/actions/runs/5563677313/setup.zip",
+    "hash": "5a7ca949341f6c767560c28e0642008231b36eb9350323be5ad3ee12b12f5dd3",
     "post_install": [
         "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
         "if (-not $global) { error \"$app must be installed with --global\"; break }",
