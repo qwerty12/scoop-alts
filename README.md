@@ -17,6 +17,8 @@ How do I install these manifests?
 
 To add this bucket, run `scoop bucket add scoop-alts https://github.com/qwerty12/scoop-alts`. To install, do `scoop install scoop-alts/<manifest>`.
 
+You might need to also run `scoop config force_update $true` in a PowerShell session to not have scoop disregard updates from this bucket.
+
 ---------------------------------
 
 <details>
