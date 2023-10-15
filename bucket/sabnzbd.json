@@ -1,5 +1,5 @@
 {
-    "version": "4.1.0",
+    "version": "4.2.0Alpha1",
     "description": "The automated Usenet download tool (Beta/RC if available)",
     "homepage": "https://sabnzbd.org",
     "license": "GPL-2.0-or-later",
@@ -9,15 +9,15 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sabnzbd/sabnzbd/releases/download/4.1.0/SABnzbd-4.1.0-win64-bin.zip",
-            "hash": "c6aa0868c1c37a41cd0c662f80cd386ac6c64bf316b685b61195b2370589148e"
+            "url": "https://github.com/sabnzbd/sabnzbd/releases/download/4.2.0Alpha1/SABnzbd-4.2.0Alpha1-win64-bin.zip",
+            "hash": "92ad4bd33130e4477e1963cf7ced09c64bde6b0f505b375665726b2abe403ce6"
         },
         "32bit": {
-            "url": "https://github.com/sabnzbd/sabnzbd/releases/download/4.1.0/SABnzbd-4.1.0-win32-bin.zip",
-            "hash": "77b697b775a55e607ea633aa1a6e13f17e5156ef9b729793303028f376a6f2f9"
+            "url": "https://github.com/sabnzbd/sabnzbd/releases/download/4.2.0Alpha1/SABnzbd-4.2.0Alpha1-win32-bin.zip",
+            "hash": "4d0c486379dc88f7d090dde32b704b6344f690c2d22059cff7dbb3ceb762cd82"
         }
     },
-    "extract_dir": "SABnzbd-4.1.0",
+    "extract_dir": "SABnzbd-4.2.0Alpha1",
     "bin": [
         "SABnzbd-console.exe",
         [
