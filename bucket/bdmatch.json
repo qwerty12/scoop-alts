@@ -15,6 +15,12 @@
             "extract_dir": "BDMatch_v2.0.4_AVX2_appsdk_dotnet"
         }
     },
+    "shortcuts": [
+        [
+            "BDMatch.exe",
+            "BDMatch"
+        ]
+    ],
     "homepage": "https://github.com/Thomasyse/BDMatch",
     "bin": "BDMatch.exe",
     "checkver": "github",
