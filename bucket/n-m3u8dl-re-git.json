@@ -9,9 +9,8 @@
             "ffmpeg-yt-dlp",
             "ffmpeg"
         ],
-        "shaka-packager/mp4decrypt": [
-            "scoop-alts/shaka-packager-mod",
-            "bento4"
+        "shaka-packager": [
+            "scoop-alts/shaka-packager-mod"
         ],
         "mkvmerge": "mkvtoolnix"
     },
