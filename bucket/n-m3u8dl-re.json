@@ -1,6 +1,6 @@
 {
     "version": "0.2.2-beta+20241130172522",
-    "description": "DASH/HLS/MSS stream downloader supporting on-demand & live broadcasts",
+    "description": "DASH/HLS/MSS/MPD/M3U8/ISM stream downloader",
     "homepage": "https://github.com/nilaoda/N_m3u8DL-RE",
     "license": "MIT",
     "suggest": {
