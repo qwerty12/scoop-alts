@@ -1,5 +1,5 @@
 {
-    "version": "0.2.3-beta+20241201042319",
+    "version": "0.3.0-beta+20241201152349",
     "description": "DASH/HLS/MSS/MPD/M3U8/ISM stream downloader",
     "homepage": "https://github.com/nilaoda/N_m3u8DL-RE",
     "license": "MIT",
@@ -17,16 +17,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.2.3-beta/N_m3u8DL-RE_Beta_win-x64_20241201.zip",
-            "hash": "cf80c9de14cb66b3bd679851845c5eac6307accdd6db0cb97860d0b833b98988"
+            "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.3.0-beta/N_m3u8DL-RE_v0.3.0-beta_win-x64_20241201.zip",
+            "hash": "60fc135df4ef75a4e12e23f17a06e9433862d081be10a70313212eac62ef9edd"
         },
         "32bit": {
-            "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.2.3-beta/N_m3u8DL-RE_Beta_win-NT6.0-x86_20241201.zip",
-            "hash": "d9159ff076ed63a5035b58aa747debb04df79f989bbf7927ccbede02047ee26b"
+            "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.3.0-beta/N_m3u8DL-RE_v0.3.0-beta_win-NT6.0-x86_20241201.zip",
+            "hash": "a48d78ed1778533282194634056af8b6ae1ee9982533abc5a5255d18325ada6d"
         },
         "arm64": {
-            "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.2.3-beta/N_m3u8DL-RE_Beta_win-arm64_20241201.zip",
-            "hash": "301a9f9e9af31ec88dc3a3e71a0162077d024f135487eda1d2e8d8e2cc11eac0"
+            "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.3.0-beta/N_m3u8DL-RE_v0.3.0-beta_win-arm64_20241201.zip",
+            "hash": "1e19e3971a777b920fdad90e8eab01c6c5b79ff4c7364dda60be68f2db1c2823"
         }
     },
     "bin": [
@@ -41,28 +41,26 @@
             "$cont = (Invoke-RestMethod -UseBasicParsing -Method Get -Headers @{'Accept'='application/vnd.github+json';'Accept-Encoding'='gzip'} -MaximumRedirection 0 -Uri 'https://api.github.com/repos/nilaoda/N_m3u8DL-RE/releases?per_page=1')[0]",
             "$basever = $cont.tag_name.TrimStart('v')",
             "foreach ($_ in $cont.assets) {",
-            "  if ($_.name -cmatch '^N_m3u8DL-RE_(?<phase>[A-Za-z]+_)?win-x64_(?<date>\\d+)\\.zip$') {",
+            "  if ($_.name -cmatch \"^N_m3u8DL-RE_v${basever}_win-x64_(?<date>\\d+)\\.zip$\") {",
             "    $updated_date = ([DateTime]$_.updated_at).ToUniversalTime().ToString('yyyyMMddHHmmss')",
-            "    Write-Output ('basever:\"' + $basever + '\"') ('phase:\"' + $matches.phase + '\"') ('date:\"' + $matches.date + '\"') ('updated_date:\"' + $updated_date + '\"')",
+            "    Write-Output ('basever:\"' + $basever + '\"') ('date:\"' + $matches.date + '\"') ('updated_date:\"' + $updated_date + '\"')",
             "    break",
             "  }",
             "}"
         ],
-        "regex": "basever:\"(?<basever>[\\w.-]+)\"\\sphase:\"(?<phase>[A-Za-z]+_)?\"\\sdate:\"(?<date>\\d+)\"\\supdated_date:\"(?<updated_date>\\d+)\"",
+        "regex": "basever:\"(?<basever>[\\w\\.-]+)\"\\sdate:\"(?<date>\\d+)\"\\supdated_date:\"(?<updated_date>\\d+)\"",
         "replace": "${basever}+${updated_date}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v$matchBasever/N_m3u8DL-RE_$matchPhasewin-x64_$matchDate.zip",
-                "extract_dir": "N_m3u8DL-RE_$matchPhasewin-x64"
+                "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v$matchBasever/N_m3u8DL-RE_v$matchBasever_win-x64_$matchDate.zip"
             },
             "32bit": {
-                "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v$matchBasever/N_m3u8DL-RE_$matchPhasewin-NT6.0-x86_$matchDate.zip"
+                "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v$matchBasever/N_m3u8DL-RE_v$matchBasever_win-NT6.0-x86_$matchDate.zip"
             },
             "arm64": {
-                "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v$matchBasever/N_m3u8DL-RE_$matchPhasewin-arm64_$matchDate.zip",
-                "extract_dir": "N_m3u8DL-RE_$matchPhasewin-arm64"
+                "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v$matchBasever/N_m3u8DL-RE_v$matchBasever_win-arm64_$matchDate.zip"
             }
         }
     }
