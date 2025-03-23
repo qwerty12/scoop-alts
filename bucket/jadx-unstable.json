@@ -1,13 +1,13 @@
 {
-    "version": "r2405.4daad2f",
+    "version": "r2406.5846e6d",
     "description": "Dex to Java decompiler (unstable build)",
     "homepage": "https://github.com/skylot/jadx",
     "license": "Apache-2.0",
     "suggest": {
         "JDK": "java/openjdk"
     },
-    "url": "https://nightly.link/skylot/jadx/workflows/build-artifacts/master/jadx-r2405.4daad2f.zip",
-    "hash": "03724f4c88def175c9f190acc0736cc83dfb4b1568cdd351fd1510d057fd1aa6",
+    "url": "https://nightly.link/skylot/jadx/workflows/build-artifacts/master/jadx-r2406.5846e6d.zip",
+    "hash": "76cc83d8cff7a9c365a0d0502e65c8f14b5f1e6eaac6c941d9632dbe78adbe6a",
     "bin": [
         "bin\\jadx.bat",
         "bin\\jadx-gui.bat"
