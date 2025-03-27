@@ -1,5 +1,5 @@
 {
-    "version": "2025.03.25",
+    "version": "2025.03.26",
     "description": "Automate downloading and metadata generation [for Kodi, Jellyfin, Plex etc.] with [built-in] yt-dlp",
     "homepage": "https://github.com/jmbannon/ytdl-sub",
     "license": "GPL-3.0-only",
@@ -12,8 +12,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jmbannon/ytdl-sub/releases/download/2025.03.25/ytdl-sub.exe",
-            "hash": "6b9a9be1fcf05011d9077283fc9fdaa57208a419f2f5679c697a639f447cc637"
+            "url": "https://github.com/jmbannon/ytdl-sub/releases/download/2025.03.26/ytdl-sub.exe",
+            "hash": "7fe4572662aa834219542020dbb76e6b83a97ebec1ce828428f3e85c7b44ef53"
         }
     },
     "bin": "ytdl-sub.exe",
