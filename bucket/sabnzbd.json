@@ -1,5 +1,5 @@
 {
-    "version": "4.5.0RC1",
+    "version": "4.5.0",
     "description": "The automated Usenet download tool (Beta/RC if available)",
     "homepage": "https://sabnzbd.org",
     "license": "GPL-2.0-or-later",
@@ -9,11 +9,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sabnzbd/sabnzbd/releases/download/4.5.0RC1/SABnzbd-4.5.0RC1-win64-bin.zip",
-            "hash": "c872f383ba687ec44687db24befc2eaf31265e5d98b34086a7d5d9fe86a28095"
+            "url": "https://github.com/sabnzbd/sabnzbd/releases/download/4.5.0/SABnzbd-4.5.0-win64-bin.zip",
+            "hash": "658a4e5fef8c8bd33f9101f77f4c10b6fee6f2b41f5fc69bf69056edc6a92491"
         }
     },
-    "extract_dir": "SABnzbd-4.5.0RC1",
+    "extract_dir": "SABnzbd-4.5.0",
     "bin": [
         "SABnzbd-console.exe",
         [
