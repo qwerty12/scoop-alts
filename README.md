@@ -8,8 +8,6 @@ This, not aiming to be extensive in the slightest, carries manifests bourne out 
 
 * [yt-dlp's `ffmpeg` build](https://github.com/yt-dlp/FFmpeg-Builds)
 
-* [My *modified* nightly `mpv` builds](https://github.com/qwerty12/mpv-winbuild) (nightlies of shinchiro's mpv builds are in the main Scoop buckets)
-
 * [The very latest version of SABnzbd](https://github.com/sabnzbd/sabnzbd/releases), whether it be a release, or a beta or an RC.
 
 How do I install these manifests?
