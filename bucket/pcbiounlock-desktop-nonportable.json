@@ -1,0 +1,52 @@
+{
+    "version": "2.1.0",
+    "description": "PC Bio Unlock desktop app (unlock your PC with your Android phone)",
+    "homepage": "https://meis-apps.com/pc-bio-unlock",
+    "license": "GPL-3.0",
+    "notes": "Install/upgrade the Credential Manager by running PC Bio Unlock from the Start Menu.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/MeisApps/pcbu-desktop/releases/download/v2.1.0/PCBioUnlock-Setup-x64.exe",
+            "hash": "4822abd361e019c47a9ca89386519fc4d9d3fcfffa6719bb341dc031f8a0fb87"
+        },
+        "arm64": {
+            "url": "https://github.com/MeisApps/pcbu-desktop/releases/download/v2.1.0/PCBioUnlock-Setup-arm64.exe",
+            "hash": "be409c119397599ee93ea7a244a463a8683f219fb702dc71edb27b9582513bb6"
+        }
+    },
+    "pre_install": [
+        "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+        "if (-not $global) { error \"$app must be installed with --global\"; break }"
+    ],
+    "installer": {
+        "args": [
+            "/VERYSILENT",
+            "/SUPPRESSMSGBOXES",
+            "/SP-",
+            "/NOCANCEL",
+            "/NORESTART",
+            "/ALLUSERS"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if ($cmd -eq 'uninstall') {",
+            "    if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "    Invoke-ExternalCommand \"$env:ProgramFiles\\PCBioUnlock\\unins000.exe\" -ArgumentList @('/VERYSILENT', '/SUPPRESSMSGBOXES', '/SP-', '/NOCANCEL', '/NORESTART', '/FORCECLOSEAPPLICATIONS') -RunAs",
+            "}"
+        ]
+    },
+    "checkver": {
+        "github": "https://github.com/MeisApps/pcbu-desktop"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/MeisApps/pcbu-desktop/releases/download/v$version/PCBioUnlock-Setup-x64.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/MeisApps/pcbu-desktop/releases/download/v$version/PCBioUnlock-Setup-arm64.exe"
+            }
+        }
+    }
+}
