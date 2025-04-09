@@ -12,7 +12,7 @@
     },
     "notes": [
         "Install/upgrade the Credential Manager by running PC Bio Unlock from the Start Menu.",
-        "As this installs a DLL that gets loaded into a SYSTEM process, it is advisable to restrict the Users' group write access for C:\\ProgramData\\scoop\\apps\\pcbiounlock-desktop-nonportable."
+        "As PCBU installs a DLL which is loaded into a highly privileged process, it is advisable to restrict the Users' group write access to C:\\ProgramData\\scoop\\apps\\pcbiounlock-desktop-nonportable."
     ],
     "architecture": {
         "64bit": {
