@@ -9,9 +9,5 @@
             "hash": "6c71089b8c629c69424b042769f1565f71adc6cd24b2f8d3713c96fa7fdac2fb"
         }
     },
-    "bin": "floss.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "url": "https://github.com/mandiant/flare-floss/releases/download/v$version/floss-v$version-windows.zip"
-    }
+    "bin": "floss.exe"
 }
