@@ -1,5 +1,5 @@
 {
-    "version": "0.3.0-beta+20241203033607",
+    "version": "0.5.0-beta+20251027144112",
     "description": "DASH/HLS/MSS/MPD/M3U8/ISM stream downloader",
     "homepage": "https://github.com/nilaoda/N_m3u8DL-RE",
     "license": "MIT",
@@ -17,16 +17,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.3.0-beta/N_m3u8DL-RE_v0.3.0-beta_win-x64_20241203.zip",
-            "hash": "876b3208bd466e433a22ddea98330b8a5078c95306ba2fb74e4bfc8950d07b24"
+            "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.5.0-beta/N_m3u8DL-RE_v0.5.0-beta_win-x64_20251027.zip",
+            "hash": "a3a471ba83401a0830eba2b256a539a826c706d1731342bab465fe787597084c"
         },
         "32bit": {
-            "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.3.0-beta/N_m3u8DL-RE_v0.3.0-beta_win-NT6.0-x86_20241203.zip",
-            "hash": "093144b61cce6a68ecfa49984406a39c512650caeea0059bdb78b35913144be7"
+            "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.5.0-beta/N_m3u8DL-RE_v0.5.0-beta_win-NT6.0-x86_20251027.zip",
+            "hash": "7f3f922f29801db5a4da518cf0f3b222492d1b6428dad74a02c80ee83e238e00"
         },
         "arm64": {
-            "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.3.0-beta/N_m3u8DL-RE_v0.3.0-beta_win-arm64_20241203.zip",
-            "hash": "e08b52379c408c0b0c8ead3d0061f70985fd64ce82e2c7fc23dd75c98172b8fc"
+            "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.5.0-beta/N_m3u8DL-RE_v0.5.0-beta_win-arm64_20251027.zip",
+            "hash": "8c7539f40c296051bc8700df3aa045d3f792e86db8bd14d59489a75f91e4d3b5"
         }
     },
     "bin": [
