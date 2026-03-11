@@ -1,20 +1,20 @@
 {
-    "version": "1.751.0",
+    "version": "1.751.1",
     "description": "A CLI tool for interacting with the Speakeasy platform and its API",
     "homepage": "https://speakeasy.com",
     "license": "Elastic-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/speakeasy-api/speakeasy/releases/download/v1.751.0/speakeasy_windows_amd64.zip",
-            "hash": "4992795641cb9474db0725522eaddcc71c69efb20bec7e62fa4bc43d11a95419"
+            "url": "https://github.com/speakeasy-api/speakeasy/releases/download/v1.751.1/speakeasy_windows_amd64.zip",
+            "hash": "935b011b6763a94e7498f2f05ba5d2cdf51205defe02aa1de6b50d0579a9efb0"
         },
         "32bit": {
-            "url": "https://github.com/speakeasy-api/speakeasy/releases/download/v1.751.0/speakeasy_windows_386.zip",
-            "hash": "843f743b99e1ea1e021e94b6d5d3e9854038e0e2f828ff35adc63fc52daa9635"
+            "url": "https://github.com/speakeasy-api/speakeasy/releases/download/v1.751.1/speakeasy_windows_386.zip",
+            "hash": "7cea59186dc19fbab6cb107d77d7fe542aa0315ef97fe8ef66281e4bc2e8f7c8"
         },
         "arm64": {
-            "url": "https://github.com/speakeasy-api/speakeasy/releases/download/v1.751.0/speakeasy_windows_arm64.zip",
-            "hash": "dc5844d60dd0a7686afedf85d8f458476b940b8093dbbdf7eb00571dc82810e9"
+            "url": "https://github.com/speakeasy-api/speakeasy/releases/download/v1.751.1/speakeasy_windows_arm64.zip",
+            "hash": "36018ae8e3352ac0b2025b0049c4b9816841413c04d654893e559021a9dde69f"
         }
     },
     "bin": "speakeasy.exe",
