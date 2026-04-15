@@ -1,13 +1,13 @@
 {
-    "version": "0+202508-1",
+    "version": "0+202602-2",
     "description": "Firmware for Virtual Machines (x86_64, i686)",
     "homepage": "https://github.com/tianocore/tianocore.github.io/wiki/OVMF",
     "license": "BSD-2-Clause-Patent,MIT",
     "suggest": {
         "qemu": "qemu"
     },
-    "url": "https://archlinux.org/packages/extra/any/edk2-ovmf/download/#/edk2-ovmf-202508-1-any.pkg.tar.zst",
-    "hash": "1d7fa267bf90be35d5a792b14769226e5d371aada87619b4f4dbdb621a552f3e",
+    "url": "https://archlinux.org/packages/extra/any/edk2-ovmf/download/#/edk2-ovmf-202602-2-any.pkg.tar.zst",
+    "hash": "077e2281e581b6df478080ff847962e9ac7c19772d43574376e5955be03f647b",
     "extract_dir": "usr\\share",
     "post_install": "Remove-Item \"$dir\\ovmf\", \"$dir\\usr\"",
     "checkver": {
