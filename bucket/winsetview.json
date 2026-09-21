@@ -1,11 +1,11 @@
 {
-    "version": "20260831022617+fc4051c35c",
+    "version": "20260921180923+19f27f2150",
     "description": "Globally set File Explorer folder views (*nightly* build)",
     "homepage": "https://github.com/LesFerch/WinSetView",
     "license": "MIT",
-    "url": "https://github.com/LesFerch/WinSetView/archive/fc4051c35cd5295ab6f7922539d930c0309638d3.zip",
-    "hash": "0fc3e5bd7cc1081f6e2b997624c43e47a6940b1b9996417bf4d67b18b182ecfa",
-    "extract_dir": "WinSetView-fc4051c35cd5295ab6f7922539d930c0309638d3",
+    "url": "https://github.com/LesFerch/WinSetView/archive/19f27f2150845871c53cd7b87347423b5fd5d003.zip",
+    "hash": "48f8dfae61ccaba50bc2781a6e62831b9fd123a846da879701466e7c092d9666",
+    "extract_dir": "WinSetView-19f27f2150845871c53cd7b87347423b5fd5d003",
     "pre_install": "$manifest.persist | ForEach-Object { if (-not (Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" -Force -ItemType \"Directory\" | Out-Null } }",
     "post_install": [
         "$mshta = \"C:\\Windows\\System32\\mshta.exe\"",
