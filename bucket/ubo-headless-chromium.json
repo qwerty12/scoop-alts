@@ -1,10 +1,10 @@
 {
-    "version": "1.75.1b12z",
+    "version": "1.75.1b13z",
     "description": "A mangling of uBlock Origin suitable for me to load into ephemeral headless Chromium instances.",
     "homepage": "https://github.com/gorhill/uBlock",
     "license": "GPL-3.0-or-later",
-    "url": "https://github.com/gorhill/uBlock/releases/download/1.75.1b12/uBlock0_1.75.1b12.chromium.zip",
-    "hash": "a1ab342c772077e3515a5499c9f2467709880a3da57fb2bbc0ca6d8460624a19",
+    "url": "https://github.com/gorhill/uBlock/releases/download/1.75.1b13/uBlock0_1.75.1b13.chromium.zip",
+    "hash": "faf588d5cd73e35ea82dedd5bc4e1fce053ad8ba59f504aa44b0e57543e8aaf8",
     "post_install": [
         "# https://stackoverflow.com/a/55384556",
         "function Format-Json([Parameter(Mandatory, ValueFromPipeline)][String] $json, [bool] $UseTabs) {",
