@@ -1,13 +1,13 @@
 {
-    "version": "1.7.3",
+    "version": "1.7.4",
     "description": "Open source subtitle translator using LLMs (gpt-subtrans GUI)",
     "homepage": "https://github.com/machinewrapped/gpt-subtrans",
     "license": "MIT",
     "notes": "This is nonportable; settings and logs are saved to %APPDATA%\\MachineWrapped\\GPTSubtrans.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/machinewrapped/gpt-subtrans/releases/download/v1.7.3/gui-subtrans-1.7.3.zip",
-            "hash": "722ab9f5deaf40fb8347322e3a06a1cc7094d7fd6a85125068fcd220fce771fe"
+            "url": "https://github.com/machinewrapped/gpt-subtrans/releases/download/v1.7.4/gui-subtrans-1.7.4.zip",
+            "hash": "5feb925f544ec0954110cdccb148b9ca1bf245d7b00fdca269c8b0389ac5b9a6"
         }
     },
     "extract_dir": "gui-subtrans",
