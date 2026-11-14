@@ -1,16 +1,16 @@
 {
-    "version": "2026.11.09.190156+304885b",
+    "version": "2026.11.14.165232+aa69087",
     "description": "Unofficial revival of dnSpy, a .NET debugger and assembly editor",
     "homepage": "https://github.com/dnSpyEx/dnSpy",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/dnSpyEx/dnSpy/actions/runs/42679416471/dnSpy-net-win64.zip",
-            "hash": "3a5224b826697030ed8f637cfdd32110db4da54b593a9d2c32be042fdc46cb88"
+            "url": "https://nightly.link/dnSpyEx/dnSpy/actions/runs/43617981770/dnSpy-net-win64.zip",
+            "hash": "0ae00539adac40ea055e0784054831e3c1fb3ba80edbe0f0762d421b14fe32b7"
         },
         "32bit": {
-            "url": "https://nightly.link/dnSpyEx/dnSpy/actions/runs/42679416471/dnSpy-net-win32.zip",
-            "hash": "b0127a5d454591b05672e09cb039cd55928605033a27ef3939ae42d927bb6090"
+            "url": "https://nightly.link/dnSpyEx/dnSpy/actions/runs/43617981770/dnSpy-net-win32.zip",
+            "hash": "f68829e643b7834b6ba39af9f237a267b5b9bb3fe09c42115c73058770f013e4"
         }
     },
     "bin": "dnSpy.Console.exe",
